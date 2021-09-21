@@ -16,7 +16,7 @@
                      <nav>
                            <?php wp_nav_menu( [
 		                          'theme_location'  => 'primary',
-                              'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                              'depth'           => 2, 
                               'container'       => false,
 	                          ] ); ?>
                        </nav>

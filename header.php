@@ -29,14 +29,14 @@
                </div>
                <div class="top-item row">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <div class="top-sub-item">
+                                <div class="top-sub-item top-text">
                       Выбрать ваш город</br>
                        установки потолков
                                   </div>
                </div>
                <div class="top-item row">
                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                     <div class="top-sub-item">
+                     <div class="top-sub-item top-text">
                             пн-вс 9:00-18:00
                       </div>
                </div>
@@ -50,18 +50,18 @@
                       <i class="fa fa-phone" aria-hidden="true"></i>
                    </div>
                       <div class="column">
-                         <div class="top-sub-item number">
+                         <div class="top-sub-item top-text number">
                              +38 (067) 611 66 12
                          </div>
-                         <div class="top-sub-item number">
+                         <div class="top-sub-item top-text number">
                              +38 (067) 611 66 12
                          </div>
                       </div>
                        <div class="column">
-                       <div class="top-sub-item number">
+                       <div class="top-sub-item top-text number">
                              +38 (067) 611 66 12
                          </div>
-                         <div class="top-sub-item">
+                         <div class="top-sub-item button">
                              <button class="primary">
                                Заказать звонок
                              </button>
@@ -71,8 +71,13 @@
            </div>
     </header>
     <div class="midheader">
+           <div class="container row">
+                     <div class="logo">
+                       <img src="<?php bloginfo("template_directory"); ?>/img/logo.png" alt="" class="logo">
+                     </div>
+                     
                      <nav>
-                    
+    
                            <?php wp_nav_menu( [
 		                          'theme_location'  => 'primary',
                               'depth'           => 2, 
@@ -82,4 +87,5 @@
                        </nav>
                        <div class="burger toggle" onclick="menuToggle()"><i class="fa fa-bars"></i>
                         </div>
+                 </div>
             </div> 

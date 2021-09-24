@@ -18,17 +18,17 @@ function service_custom_post_type(){
 	register_post_type('service', array(
 		'labels'             => array(
 			'name'               => 'service', 
-			'singular_name'      => 'service', 
-			'add_new'            => 'Add new',
-			'add_new_item'       => 'Add new service',
-			'edit_item'          => 'Edit service ',
-			'new_item'           => 'New service',
-			'view_item'          => 'View service',
+			'singular_name'      => 'Услуги', 
+			'add_new'            => 'Добавить',
+			'add_new_item'       => 'Добавить новую',
+			'edit_item'          => 'Редактировать услугу',
+			'new_item'           => 'Новая услуга',
+			'view_item'          => 'Просмотр',
 			'search_items'       => 'Search',
 			'not_found'          =>  'not found',
 			'not_found_in_trash' => 'not found in trash',
 			'parent_item_colon'  => '',
-			'menu_name'          => 'Services'
+			'menu_name'          => 'Услуги'
 
 		  ),
 		'public'             => true,
@@ -40,9 +40,9 @@ function service_custom_post_type(){
 		'capability_type'    => 'post',
 		'has_archive'        => false,
 		'hierarchical'       => false,
-		'menu_position'      => 16,
+		'menu_position'      => 15,
         'menu_icon'          => 'dashicons-welcome-add-page',
-		'supports'           => array('title','editor','thumbnail','excerpt','custom-fields')
+	    'supports'           => array('title','editor','thumbnail','excerpt','custom-fields')
 	
 		) );
 
@@ -54,12 +54,12 @@ function gallery_custom_post_type(){
 	register_post_type('gallery', array(
 		'labels'             => array(
 			'name'               => 'gallery', 
-			'singular_name'      => 'Gallery', 
-			'add_new'            => 'Add new',
-			'add_new_item'       => 'Add new gallery',
-			'edit_item'          => 'Edit gallery',
-			'new_item'           => 'New gallery',
-			'view_item'          => 'View gallery',
+			'singular_name'      => 'Галерея', 
+			'add_new'            => 'Добавить',
+			'add_new_item'       => 'Добавить новый',
+			'edit_item'          => 'Редактировать',
+			'new_item'           => 'Новый',
+			'view_item'          => 'Просмотр',
 			'search_items'       => 'Search gallery',
 			'not_found'          =>  'gallery not found',
 			'not_found_in_trash' => 'not found in trash',
@@ -91,11 +91,11 @@ function silcon_custom_post_type(){
 		'labels'             => array(
 			'name'               => 'silcon', 
 			'singular_name'      => 'Потолок', 
-			'add_new'            => 'Add new',
-			'add_new_item'       => 'Add new gallery',
-			'edit_item'          => 'Edit gallery',
-			'new_item'           => 'New gallery',
-			'view_item'          => 'View gallery',
+			'add_new'            => 'Добавить',
+			'add_new_item'       => 'Добавить новый',
+			'edit_item'          => 'Редактировать',
+			'new_item'           => 'Новый',
+			'view_item'          => 'Просмотр',
 			'search_items'       => 'Search gallery',
 			'not_found'          =>  'gallery not found',
 			'not_found_in_trash' => 'not found in trash',
@@ -112,9 +112,45 @@ function silcon_custom_post_type(){
 		'capability_type'    => 'post',
 		'has_archive'        => false,
 		'hierarchical'       => false,
-		'menu_position'      => 14,
+		'menu_position'      => 15,
         'menu_icon'          => 'dashicons-welcome-add-page',
 		'supports'           => array('title','editor','thumbnail')
+	
+		) );
+
+}
+//FAQ post type
+add_action('init', 'faq_custom_post_type');
+function faq_custom_post_type(){
+
+	register_post_type('faq', array(
+		'labels'             => array(
+			'name'               => 'faq', 
+			'singular_name'      => 'Вопрос', 
+			'add_new'            => 'Добавить',
+			'add_new_item'       => 'Добавить новый',
+			'edit_item'          => 'Редактировать',
+			'new_item'           => 'Новый',
+			'view_item'          => 'Просмотр',
+			'search_items'       => 'Search gallery',
+			'not_found'          =>  'gallery not found',
+			'not_found_in_trash' => 'not found in trash',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Вопросы'
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => false,
+		'menu_position'      => 15,
+        'menu_icon'          => 'dashicons-welcome-add-page',
+		'supports'           => array('title','thumbnail')
 	
 		) );
 
